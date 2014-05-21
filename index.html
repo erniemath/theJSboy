@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>他们给了这页一个名字叫首页</title>
+    </head>
+    <body>
+        <h1>这是一个标题</h1>
+        <p>这是正文</p>
+        <h1>JS第一课：JS能做些什么</h1>
+        <p>由于众所周知的原因，我不得不先学习JavaScript，而且要快，要好。下面我们就开始吧</p>
+        <p>JS能进行HTML的输出哦。下面这两句可不是用p标签写出来的。</p>
+        <script>
+        	document.write("<h2>This is a heading</h2>");
+        	document.write("<p>This is a paragraph</p>");
+        </script>
+        <p>我发现document.write()中可以在分号里添加HTML标签，这是今天晚上的第一个收获。现在是2014年5月19日 20：14。我会在某一天把这个时间设置为自动生成的。下一个例子</p>
+        <button type="button" onclick="alert('Welcome!')">点击这里</button>
+	    <p>button是一个控件，w3school里说这是一个事件。whatever~不过这个button空间写起来并不麻烦，而且不需要写在&lt;script&gt;中。这个控件有两个属性，type和onclick，type的值为button而onclick的值为alert方法，即弹出一个对话框，内容为welcome</p>
+	    <p>alert在实际开发中并不十分常用，不过用于调试代码却再好用不过了。</p>
+	    <p id="demo1">下一个例子是改变JS能够改变HTML内容，比如这一句会变成……变成什么呢？试试下面的按钮。</p>
+	    <script>
+	    function myFunc(){
+	    	x=document.getElementById("demo1");//查找元素
+	    	x.innerHTML="Hello JavaScript";    //改变内容
+	    }
+	    </script>
+		<button type="button" onclick="myFunc()">点击这里</button>
+		<p>好的，我真棒。但是实际上这里面要经过<b>三</b>步才能完成这个功能。首先，你需要在要改变的内容中设置id值以便后面调用；之后需要在JS中设置函数，而函数的内容是改变那一个id所代表段落的
+			内容；在那之后，则设置了一个button控件，也就是一个按钮，用来触发这个函数包含的功能，也就是这个按钮触发调用了刚才在JS中预先设置好的函数。</p>
+		<p>下面一个例子比较复杂，是JS改变img标签图像的来源，造成了实时变化HTML标签内容的效果。这个暂时比较复杂。先不演示了。</p>
+		<p id="demo2">这个例子比较简单，是什么效果呢？点一下试试！</p>
+		<script>
+		function myFun2(){
+			x=document.getElementById("demo2"); //找到元素
+			x.style.color="#ff0000";
+		} 
+		</script>
+		<button type="button" onclick="myFun2()">点击试试！</button>
+		<p>是的，原理也很简单。也是需要上面的<b>三</b>步，重点是写JS中的函数。函数的写法后面的课程会讲到。</p>
+		<p>还有最后一个例子，哦，这个句子没有用p标签，让我看看这句话是什么效果……嗯，完全显示不出来，现在能看到是我后加的p标签。额，我扯远了，最后一个例子是alert，当然，
+			alert必须在&lt;script&gt;标签中才能使用</p>
+		<script>
+			document.write("这个也太难了。好吧容许我再偷一个懒。因为的确是我写不出来的东西！这一课就这样结束了吧~");
+		</script>
+		
+    </body>
+</html>
